@@ -6,6 +6,10 @@ angular.module('eTrade')
   function User(){
   }
 
+  User.anonLogin = function(){
+    return $rootScope.afAuth.$authAnonymously();
+  };
+
   User.oauth = function(provider){
     return $rootScope.afAuth.$authWithOAuthPopup(provider);
   };

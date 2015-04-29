@@ -8,6 +8,10 @@ angular.module('eTrade')
     User.oauth(provider);
   };
 
+  $scope.anonLogin = function(){
+    User.anonLogin();
+  };
+
   $scope.submit = function(user){
     if($scope.name === 'register'){
       User.register(user)
