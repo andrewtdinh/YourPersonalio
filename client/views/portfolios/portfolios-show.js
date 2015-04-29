@@ -21,6 +21,17 @@ angular.module('eTrade')
     $scope.stock = null;
   }
 
+  $scope.sell = function(s, index){
+    var stock = new Stock(s);
+    console.info('stock: ', stock);
+    stock.getQuote()
+    .then(function(response){
+      stock.quote = response.data.LastPrice;
+      Portfolio.sellStock(stock, $state.params.name, index);
+    });
+  };
+
+
   function computePosition(){
     $scope.position = $scope.stocks.reduce(function(acc, stock){
       return acc + stock.position;
