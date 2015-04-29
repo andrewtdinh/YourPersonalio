@@ -22,22 +22,16 @@ angular.module('eTrade')
   Portfolio.sellStock = function(stock, portfolio, index){
     var fbPortfolio = $rootScope.fbUser.child('portfolios/' + portfolio);
     var afPortfolio = $firebaseArray(fbPortfolio);
-    var stockArray;
     afPortfolio.$loaded().then(function(){
       console.info('afPortfolio[index]: ', afPortfolio[index]);
-      // afPortfolio[index].$id = {};   //Can get the object but cannot remove
-      // afPortfolio.$save();
-      //afPortfolio[index].$remove();  Is not a function
       var key = afPortfolio[index].$id;
       // console.info('key: ', key);
       var fbStock = fbPortfolio.child(key);
       var afStock = $firebaseObject(fbStock);
       afStock.$loaded().then(function(){
-        afStock.$remove().then(function(){});
+        return afStock.$remove();
       });
-
     });
-
   };
 
   Portfolio.add = function(name){
