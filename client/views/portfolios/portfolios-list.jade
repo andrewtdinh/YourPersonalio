@@ -7,6 +7,6 @@ h3 LIST PORTFOLIOS
         tr
           th Name
       tbody
-        tr(ng-repeat='name in names')
+        tr(ng-repeat='name in names track by $index')
           td: a(ui-sref='portfolios.show({name:name})') {{name}}
   .col-xs-9
