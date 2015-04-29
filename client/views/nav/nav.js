@@ -34,6 +34,8 @@ angular.module('eTrade')
         return data.github.username;
       case 'google':
         return data.google.displayName;
+      case 'facebook':
+        return data.facebook.displayName;
       case 'anonymous':
         return data.provider;
     }
