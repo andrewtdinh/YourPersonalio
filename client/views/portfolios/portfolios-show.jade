@@ -24,6 +24,7 @@ h3 {{name | uppercase}} : {{position | currency}}
           th Purchased
       tbody
         tr(ng-repeat='stock in stocks')
+          td: button.btn.btn-danger.btn-xs(type='submit', ng-click='sell(stock, $index)') Sell
           td {{stock.symbol}}
           td {{stock.quote | currency}}
           td {{stock.quantity}}
