@@ -14,10 +14,10 @@ h3 {{name | uppercase}}
     form  
       .form-group
         button.btn.btn-default(type='submit', ng-click='submit(user)'): i.fa.fa-envelope
-        button.btn.btn-info(ng-click='oauth("twitter")'): i.fa.fa-twitter 
-        button.btn.btn-danger(ng-click='oauth("google")'): i.fa.fa-google
-        button.btn.btn-warning(ng-click='oauth("github")'): i.fa.fa-github
-        button#facebook.btn.btn-info(ng-click='oauth("facebook")'): i.fa.fa-facebook-official
+        button#twitterBtn.btn.btn-info(ng-click='oauth("twitter")'): i.fa.fa-twitter 
+        button#googleBtn.btn.btn-danger(ng-click='oauth("google")'): i.fa.fa-google-plus
+        button#githubBtn.btn.btn-warning(ng-click='oauth("github")'): i.fa.fa-github
+        button#facebookBtn.btn.btn-info(ng-click='oauth("facebook")'): i.fa.fa-facebook
         button.btn.btn-default(type='submit', ng-click='anonLogin()'): i.fa.fa-user-secret
           
   .col-xs-8
