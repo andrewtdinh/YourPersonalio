@@ -1,12 +1,11 @@
-h3 NEW PORTFOLIO
+h4 Enter a new sector name:
 
 .row
   .col-xs-3
-    h4 Portfolio Form
     form(name='portfolioForm', novalidate)
       .form-group
-        label(for='name') Name
+        label(for='name') 
         input.form-control#name(type='text', name='name', ng-model='name')
       .form-group
-        button.btn.btn-success(type='submit', ng-click='add(name)') Add Portfolio
+        button.btn.btn-success(type='submit', ng-click='add(name)') Add Sector
   .col-xs-9
