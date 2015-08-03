@@ -23,7 +23,7 @@ angular.module('eTrade')
     var fbPortfolio = $rootScope.fbUser.child('portfolios/' + portfolio);
     var afPortfolio = $firebaseArray(fbPortfolio);
     afPortfolio.$loaded().then(function(){
-      console.info('afPortfolio[index]: ', afPortfolio[index]);
+      // console.info('afPortfolio[index]: ', afPortfolio[index]);
       var key = afPortfolio[index].$id;
       // console.info('key: ', key);
       var fbStock = fbPortfolio.child(key);
