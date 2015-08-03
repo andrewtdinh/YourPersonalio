@@ -1,11 +1,11 @@
-h3 LIST PORTFOLIOS
+h3 SECTOR LIST
 
 .row
   .col-xs-3
     table.table.table-striped
       thead
         tr
-          th Name
+          th Sector Name:
       tbody
         tr(ng-repeat='name in names track by $index')
           td: a(ui-sref='portfolios.show({name:name})') {{name}}
