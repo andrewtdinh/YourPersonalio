@@ -1,8 +1,8 @@
 {
-  "name": "poseidon",
+  "name": "Personalio",
   "version": "0.0.1",
-  "homepage": "https://github.com/coding-house-apr2015/poseidon",
-  "author": "Chyld Medford <chyld.medford@gmail.com>",
+  "homepage": "http://andrewtdinh.com",
+  "author": "Andrew Dinh <andrewdinh74@yahoo.com>",
   "license": "BSD",
   "devDependencies": {
     "bower": "^1.4.1",
